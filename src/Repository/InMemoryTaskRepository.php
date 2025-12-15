@@ -6,11 +6,24 @@ use App\Model\Task;
 class InMemoryTaskRepository implements TaskRepositoryInterface
 {
 
-    public function findAll(): array{
-        return [
+    private array $tasks = []; 
+
+    public function __construct()
+    {
+        $this->tasks = [
             new Task("Купить кофе"),
             new Task("Проспать пары"),
             new Task("Опоздать на пары")
         ];
+    }
+
+    public function findAll(): array
+    {
+        return $this->tasks; 
+    }
+
+    public function add(Task $task): void
+    {
+        $this->tasks[] = $task; 
     }
 }
