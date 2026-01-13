@@ -41,10 +41,8 @@ $container->set(TaskRepositoryInterface::class, function (Container $c) use ($co
     };
 });
 
-$container->set(InMemoryTaskRepository::class, fn () => new InMemoryTaskRepository());
-
 $container->set(TaskController::class, function (Container $c) {
-    $repo = $c->get(InMemoryTaskRepository::class);
+    $repo = $c->get(TaskRepositoryInterface::class);
     return new TaskController($repo);
 });
 
