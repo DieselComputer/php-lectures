@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Лист Задач</title>
+    <title>Задачи</title>
 </head>
 
 <body>
