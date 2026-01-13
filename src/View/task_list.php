@@ -1,9 +1,3 @@
-<?php
-
-$tasks = $this->getTasks();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
